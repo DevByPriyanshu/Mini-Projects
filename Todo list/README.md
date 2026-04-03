@@ -33,7 +33,10 @@ This app allows users to add, delete, and mark tasks as completed.
 
 ---
 
-## 🎯 Concepts Used
+## 🔗 Live Demo
+(https://devbypriyanshu.github.io/Mini-Projects/Todo%20list/)
+
+
 
 - DOM Manipulation
 - Event Handling
