@@ -1,0 +1,64 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: goldenrod;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+}
+
+.search {
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.search-bar {
+    width: 330px;
+    height: 32px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: medium;
+}
+
+.add-btn {
+    width: 70px;
+    height: 32px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.task {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.task-name{
+    font-size: x-large;
+    color: white;
+}
+.delete-btn{
+    width: 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
