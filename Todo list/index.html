@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="search" class="search-bar" placeholder="Enter your task...">
+            <button class="add-btn">
+                ADD
+            </button>
+        </div>
+        <div class="task-list">
+            <div class="task">
+                <input type="checkbox" class="check">
+                <span class="task-name">Complete the javascript project</span>
+                <button class="delete-btn">x</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const addBtn = document.querySelector(".add-btn");
+        const taskBox = document.querySelector(".task-list");
+        const searchTxt = document.querySelector(".search-bar");
+        const deleteButton = document.querySelector(".delete-btn");
+        const checkButton = document.querySelector(".checkbox");
+        addBtn.addEventListener("click", addButton);
+    
+        searchTxt.addEventListener("input", getInput);
+
+        taskBox.addEventListener("click", (e)=>{
+            if(e.target.classList.contains("delete-btn")){
+                e.target.parentElement.remove();
+            }
+            else if(e.target.classList.contains("check")){
+               e.target.nextElementSibling.style.textDecoration = "line-through";
+            }
+        });
+
+        function getInput(){
+            return searchTxt.value;
+        }
+
+        function addButton(){
+
+            let task = getInput();
+            taskBox.innerHTML += `<div class="task">
+                <input type="checkbox" class="check">
+                <span class="task-name">${task}</span>
+                <button class="delete-btn">x</button>
+            </div>`;
+            searchTxt.value = "";
+        }
+        searchTxt.addEventListener("keydown", (e)=>{
+            if(e.key == "Enter"){
+                addButton();
+            }
+
+        });
+        
+    </script>
+</body>
+</html>
